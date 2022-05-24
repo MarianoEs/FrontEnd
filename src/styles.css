@@ -1,0 +1,162 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: aquamarine;
+  background-image: url(".\assets\imagenes\giphy.gif");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+      }
+
+ 
+.navbar {
+  padding-top: 15px;
+  border: 0;
+  border-radius: 0;
+  font-size: 12px;
+  
+  }
+
+.justify-content-end {
+  position: absolute;
+  top: 20px;
+  right: 100px;
+  font-size: 20px;  
+  }
+
+h1 {
+  color: #18baf0;
+  font-weight:100;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 5px 5px 6px black;
+    }
+
+.seccion {
+  background-size: contain;
+  padding-top: 90px;
+  padding-bottom: 50px;
+    }
+
+.bg-2 {
+  background-color: transparet;
+  padding-top: 25px;
+  padding-bottom: 50px;
+  text-shadow: 5px 5px 6px black;
+  color:#ffffff;
+    }
+
+.bg-3 {
+padding-top: 50px;
+padding-bottom: 50px;
+text-shadow: 5px 5px 6px black;
+background-color: rgba(167, 160, 151, 0.7);
+position: relative;
+}
+
+.desarrollo {
+margin-top: 15px;
+margin-bottom: 15px;
+padding-top: 50px;
+padding-bottom: 50px;
+text-shadow: 5px 5px 6px black;
+background-color: rgba(150, 128, 98, 0.7);
+}
+
+ul, h5 {
+list-style: none;
+color:white;
+position: relative;
+}
+
+h5 {
+font-weight: bold;
+text-align: center;
+}
+
+h2, h3{ 
+color:#ffffff;
+text-align: center;
+text-shadow: 5px 5px 6px black;
+}
+
+.form{
+background-color: rgba(90, 80, 70, 0.7);
+padding-top: 50px;
+padding-bottom: 50px;
+padding-left: 50px;
+padding-right: 50px;
+margin-bottom: 15px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.form__container{
+
+width: 33%;
+display:grid;
+gap: 1em;
+grid-auto-columns: 100%;
+padding-bottom: 50px;
+}
+
+.form__cta {
+background-color:#18baf0;
+border: none;
+border-radius:0.2em;
+bottom:center;
+font-weight: 400;
+padding: .5em 1em;
+border:none;
+cursor: pointer;
+
+}
+
+.form__input {
+font-family: inherit;
+font: 1em;
+padding:.8em 1em;
+outline: none;
+border: none;
+border: 1px solid #f1b15d;
+border-radius:0.2em;
+}
+.bg-4 {
+background-color: rgb(47, 47, 47,0.7);
+color: #ffffff;
+padding-top: 20px;
+padding-bottom: 20px;
+width: 100%;
+}
+a {
+text-decoration: none;
+color:white;
+}
+
+a:hover{
+color:#f1b15d;
+}
+p {
+font-size:18px;
+}
+
+.offcanvas-body{
+background-color:rgba(167, 161, 153, 0.567)
+
+}
+
+.progress{
+width: 70%;
+text-align: center;
+}
+
+
+
+
