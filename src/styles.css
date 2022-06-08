@@ -13,7 +13,6 @@ body {
   background-size: cover;
   height: 100%;
       }
-
  
 .navbar {
   padding-top: 15px;
@@ -30,11 +29,12 @@ body {
   font-size: 20px;  
   }
 
-h1 {
+h1, .m-5 {
   color: #18baf0;
   font-weight:100;
   font-family: 'Press Start 2P', cursive;
   text-shadow: 5px 5px 6px black;
+  text-align: center;
     }
 
 .seccion {
@@ -157,6 +157,11 @@ width: 70%;
 text-align: center;
 }
 
+.form-label {
+  color:white;
+}
 
-
-
+.mb-3 {
+margin-left:35%;
+width:30%;
+}
