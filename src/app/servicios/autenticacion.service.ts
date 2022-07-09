@@ -1,25 +1,32 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { tap } from 'rxjs/operators';
+import { config } from '../data/config/config';
+import { IniciarSesionDto } from '../data/config/iniciar-sesionDto';
+
 
 @Injectable({
   providedIn: 'root'
 })
-export class AutenticacionService {
-  url="http://localhost:8080/login/";
-  currentUserSubject: BehaviorSubject<any>
-  constructor(private http: HttpClient) {
-    console.log("el servicio esta corriendo");
-    this.currentUserSubject= new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser')|| '{}'))
-   }
+export class AuthService {
+  
+  constructor(private http: HttpClient) { }
 
-   IniciarSesion(credenciales:any):Observable<any>
-   {
-    return this.http.post(this.url, credenciales).pipe(map(data=>{
-      sessionStorage.setItem('currentUser', JSON.stringify(data));  
+  public IniciarSesion(credentials:IniciarSesionDto) : Observable<Boolean> {
+    return this.http.post<Boolean>(config.baseUrl + "iniciarsesion", credentials).pipe(
+      tap((response: Boolean) => {
+        if (response)
+          sessionStorage.setItem("email", "true");
+      })
+    );
+  }
 
-      return data;
-    }))
-   }
-} 
+  public logout():void {
+    sessionStorage.removeItem("email");
+  }
+
+  public isUserLogged():boolean {
+    return sessionStorage.getItem("email") !== null;
+  }
+}

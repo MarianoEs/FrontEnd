@@ -57,6 +57,7 @@ padding-bottom: 50px;
 text-shadow: 5px 5px 6px black;
 background-color: rgba(167, 160, 151, 0.7);
 position: relative;
+text-align: center;
 }
 
 .desarrollo {
@@ -79,14 +80,14 @@ font-weight: bold;
 text-align: center;
 }
 
-h2, h3{ 
+h2, h3, .edu-titulo { 
 color:#ffffff;
 text-align: center;
 text-shadow: 5px 5px 6px black;
 }
 
-.form{
-background-color: rgba(90, 80, 70, 0.7);
+.form {
+background-color: rgba(139, 106, 74, 0.7);
 padding-top: 50px;
 padding-bottom: 50px;
 padding-left: 50px;
@@ -97,6 +98,19 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 }
+
+.contacto {
+  background-color: rgba(90, 80, 70, 0.7);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
 
 .form__container{
 
@@ -165,3 +179,14 @@ text-align: center;
 margin-left:35%;
 width:30%;
 }
+
+.logo-image {
+  height: 80px;
+  width: 80px;
+}
+.edu-school { 
+  color:#ffffff;
+  text-align: center;
+  text-shadow: 5px 5px 6px black;
+  font-weight: bold;
+  }
