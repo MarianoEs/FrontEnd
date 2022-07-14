@@ -17,7 +17,8 @@
     <li class="nav-item">
       <a class="nav-link" href="porfolio#ancla1">Contacto</a>
     </li>
-    <button type="submit" class="btn btn-primary" (click)="iniciarSesion()">Inicicar Sesion</button>
+    <button *ngIf="!isUserLogged" type="submit" class="btn btn-primary" (click)="iniciarSesion()">Iniciar Sesion</button>
+    <button *ngIf="isUserLogged" type="submit" class="btn btn-primary" (click)="onLogOut()">Cerrar Sesion</button>
   </ul>
   
 </div>

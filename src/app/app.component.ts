@@ -8,7 +8,7 @@ import { AuthService } from './servicios/autenticacion.service';
 })
 export class AppComponent implements OnInit {
   title = 'portfolio-web';
-  isUserLogged: boolean = true;
+  isUserLogged: boolean = false;
 
   constructor(private authService: AuthService) {}
   

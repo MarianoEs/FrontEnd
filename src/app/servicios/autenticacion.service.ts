@@ -22,7 +22,7 @@ export class AuthService {
     );
   }
 
-  public logout():void {
+  public logOut():void {
     sessionStorage.removeItem("email");
   }
 

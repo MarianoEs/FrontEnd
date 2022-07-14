@@ -49,34 +49,32 @@
   
     <div class="card-titles">
       <h2>EDUCACION</h2><a name="ancla2"></a>
-      <div *nglf="this.authService.isUserLogged" class="btn-edit">
-        <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educationForm" (Click)="onNewEducation()"><i class="fa fa-plus"></i></button>
+      <div *ngIf="isUserLogged" class="btn-edit">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#educationForm" (Click)="onNewEducation()"><i class="fa fa-plus"></i>NUEVA EDUCACION</button>
       </div>
     </div>
     <div>
       <ul class="items-list" id="eduList">
         <li *ngFor="let educacion of educacionList; let i = index">
           <div class="data-container">
-            <a href="#">
+    
               <div class="logo-image-container"><img id="edu-img" class="logo-image"
                   src="/../assets/iconos/{{educacion.img}}"></div>
               <div class="list-info">
                 <div>
                   <h3 id="edu-school">{{ educacion.school }} </h3>
-                  <p><span id="edu-title">{{ educacion.title }}</span>, <span id="edu-career">{{ educacion.career
-                      }}</span>
-                  </p>
+                  <p><span id="edu-title">{{ educacion.title }}</span>, <span id="edu-career">{{ educacion.career }}</span></p>
                   <p><time id="edu-start">{{ educacion.start }}</time> - <time id="edu-end">{{ educacion.end }}</time></p>
                 </div>
               </div>
-            </a>
+        
           </div>
-          <div *nglf="this.authService.isUserLogged" class="data-control">
+          <div *ngIf="isUserLogged" class="data-control">
             <div class="btn-edit">
-              <button class="btn btn-right" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i)"><i class="fa fa-pen"></i></button>
+              <button class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#educationForm" (click)="onEditEducation(i)"><i class="fa fa-pen"></i>EDITAR</button>
             </div>
             <div class="btn-edit">
-              <button class="btn btn-right" (click)="onDeleteEducation(i)"><i class="fa fa-trash"></i></button>
+              <button class="btn btn-secondary btn-sm" (click)="onDeleteEducation(i)"><i class="fa fa-trash"></i>BORRAR</button>
             </div>
           </div>
         </li>
